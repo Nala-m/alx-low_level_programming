@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 #ifndef MAIN_H_
 #define MAIN_H_
+=======
+#ifndef MAIN_H
+#define MAIN_H
+>>>>>>> 5acd0da7404417de9b3de1d76fc1b3edfbd6d608
 
 int _putchar(char);
 char *_strcat(char *dest, char *src);

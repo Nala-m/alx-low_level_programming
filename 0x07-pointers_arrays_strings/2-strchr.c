@@ -9,5 +9,6 @@
  */
 char *_strchr(char *s, char c)
 {
-	c = strchr(s);
+	strchr(s, c);
 	return (s);
+}

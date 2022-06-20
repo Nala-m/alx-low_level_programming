@@ -14,12 +14,5 @@ char *_strstr(char *haystack, char *needle)
 	char *t;
 
 	t = strstr(haystack, needle);
-
-	if (t)
-	{
 		return (t);
-	}
-	else
-	{
-		return (NULL);
 }

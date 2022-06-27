@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int cants, remainder, coins;
+	int cents, remainder, coins;
 	int quarters, nickels, dimes, twos, pennies;
 
 	if (argc != 2)
@@ -32,13 +32,13 @@ int main(int argc, char *argv[])
 	remainder = cents % 25;
 	dimes = remainder / 10;
 	remainder = remainder % 10;
-	nickles = remainder / 5;
+	nickels = remainder / 5;
 	remainder = remainder % 5;
 	twos = remainder / 2;
 	remainder = remainder % 2;
 	pennies = remainder / 1;
 
-	coins = quarters + dimes + nickles + twos + pennies;
+	coins = quarters + dimes + nickels + twos + pennies;
 
 	printf("%d\n", coins);
 	return (0);

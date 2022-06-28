@@ -14,6 +14,8 @@ char *_strdup(char *str)
 {
 	char *result;
 
+	result = malloc(sizeof(char) * (i + 1));
+
 	result = _strdup(str);
 	return (result);
 }

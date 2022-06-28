@@ -10,32 +10,41 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *strout;
-	unsigned int i, j, k, limit;
+	char *s3;
+	unsigned int s1len = 0;
+	unsigned int s2len = 0;
+	unsigned int s3len;
+	unsigned int i = 0;
+	unsigned int j = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-	for (j = 0; s2[j] != '\0'; j++)
-		;
+	while (s1[s1len])
+		s1len++;
+	while (s2[s2len])
+		s2len++;
 
-	strout = malloc(sizeof(char) * (i + j) + 1);
+	s3len = s1len + s2len;
 
-	if (strout == NULL)
-	{
-		free(strout);
+	s3 = malloc(sizeof(char) * s3len + 1);
+	if (s3 == NULL)
 		return (NULL);
+
+	while (i < s1len)
+	{
+		s3[i] = s1[i];
+		i++;
 	}
 
-	limit = j;
-
-	for (j = 0; j <= limit; k++, j++)
-		strout[k] = s2[j];
-
-	return (strout);
+	while (i <= s3len)
+	{
+		s3[i] = s2[j];
+		i++;
+		j++;
+	}
+	return (s3);
 }
 

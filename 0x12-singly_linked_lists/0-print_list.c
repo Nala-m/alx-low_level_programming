@@ -20,7 +20,4 @@ size_t print_list(const list_t *h)
 	}
 	return (counter);
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
+
